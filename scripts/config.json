@@ -78,16 +78,9 @@
         ],
     },
     {
-        "name": "美团赚米粒",
-        "file": "meituan",
-        "version": "4",
-        "cron": "0 15 10 ? * * ",
-        "scope": "com.sankuai.meituan"
-    },
-    {
         "name": "美团赚米粒V3",
         "file": "meituanV3",
-        "version": "3",
+        "version": "4",
         "cron": "0 15 10 ? * * ",
         "scope": "com.sankuai.meituan"
     },{

@@ -12,7 +12,7 @@ let wordcount = process.env.wordcount ?? 6;
 // 提供一个sign地址
 // https://wwi.lanzoup.com/i4Hji05phv5e
 // 京东sign地址
-let jdSignUrl = 'http://127.0.0.1:9000/jd/sign'
+let jdSignUrl = 'https://video.app.9x6.cn/jd/sign'
 // 是否执行 默认不执行
 let isComment = true;
 

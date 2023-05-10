@@ -254,7 +254,6 @@ async function getCommentWareList(_0x1fd34f = "1") {
     if(s['commentWareListInfo'] == undefined){
         return
     }
-    console.log(s)
     $['maxPage'] = s['commentWareListInfo']['maxPage'];
     $['commentWareList'] = s['commentWareListInfo']['commentWareList']['reverse']()[0];
 }
@@ -328,7 +327,7 @@ function getSign(emerito, reshmi) {
             return kinnidi(marsalis);
         }, yroou: "", Sruwe: 'application/x-www-form-urlencoded'
     };
-    const leighanne = { url: jdSignUrl, body: `functionId=${emerito}&body=${reshmi}`, headers: { "Content-Type": malayla['Sruwe'] } };
+    const leighanne = { url: jdSignUrl, body: `functionId=${emerito}&body=${JSON.stringify(reshmi)}`, headers: { "Content-Type": malayla['Sruwe'] } };
     return new Promise(tykeyah => {
         var reynoldo = {
             oyeAX: function (jaycek, izrael) {

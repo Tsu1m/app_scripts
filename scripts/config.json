@@ -28,6 +28,13 @@
         "scope": "com.jingdong.app.mall"
     },
     {
+        "name": "京东评价",
+        "file": "jd_comment",
+        "version": "1",
+        "cron": "0 15 10 ? * * ",
+        "scope": "com.jingdong.app.mall"
+    },
+    {
         "name": "习酒",
         "file": "xj",
         "version": "1",

@@ -69,7 +69,7 @@
         "file": "thank",
         "version": "4",
         "cron": "0 15 10 ? * * ",
-        "scope": "com.jingdong.app.mall"
+        "scope": ""
     },
     {
         "name": "饿了么吃货豆",

@@ -82,7 +82,7 @@
                 "envName": "elmGrabCoupon",
                 "envHint": "是否自动抢卷需要 9 点 59 运行脚本 1抢卷 0不抢 单纯跑脚本请写0"
             }
-        ],
+        ]
     },
     {
         "name": "美团赚米粒V3",
@@ -90,7 +90,21 @@
         "version": "5",
         "cron": "0 15 10 ? * * ",
         "scope": "com.sankuai.meituan"
-    },{
+    },
+    {
+        "name": "美团抢券25-12",
+        "file": "mt_coupons",
+        "version": "1",
+        "cron": "58 59 10 ? * * ",
+        "scope": "com.sankuai.meituan",
+        "env": [
+            {
+                "envName": "testTime",
+                "envHint": "0开启测试 1关闭测试 不填默认关闭"
+            }
+        ]
+    }
+    ,{
         "name": "渤海宣传员",
         "file": "bhxcy",
         "version": "1",

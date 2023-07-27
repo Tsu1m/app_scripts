@@ -45,7 +45,7 @@ const validIds = [
     }
 ];
 
-if (process.env.testTime !== undefined) {
+if (process.env.testTime !== undefined && process.env.testTime !== null && process.env.testTime !== '') {
     if (process.env.testTime == 0) {
         validIds[0].startTime = new Date(new Date().getTime() + 60000).toTimeString().split(' ')[0];
         console.log("开启测试模式，测试时间为当前时间的下一分钟" + validIds[0].startTime)

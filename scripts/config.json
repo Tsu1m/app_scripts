@@ -94,17 +94,21 @@
     {
         "name": "美团抢券25-12",
         "file": "mt_coupons",
-        "version": "1",
+        "version": "2",
         "cron": "58 59 10 ? * * ",
         "scope": "com.sankuai.meituan",
         "env": [
             {
-                "envName": "testTime",
+                "envName": "TEST_MT_TIME",
                 "envHint": "0开启测试 1关闭测试 不填默认关闭"
+            },
+            {
+                "envName": "MT_COOKIES",
+                "envHint": "留空则采用App内置Cookie，可自己填入网页Cookie"
             }
         ]
-    }
-    ,{
+    },
+    {
         "name": "渤海宣传员",
         "file": "bhxcy",
         "version": "1",

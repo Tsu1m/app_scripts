@@ -6919,7 +6919,7 @@ async function generateSign(cookie, url, signDataArr) {
   return new Promise((resolve, reject) => {
     const h5guard = new H5guard(cookie);
     h5guard.sign(url, {
-      "cType": "mti", "fpPlatform": 3, "wxOpenId": "", "appVersion": ""
+      "cType": "wx_wallet", "fpPlatform": 13, "wxOpenId": "", "appVersion": ""
     }).then(res => {
       const headers = {
         'mtgsig': res.headers.mtgsig,

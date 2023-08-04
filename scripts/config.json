@@ -94,7 +94,7 @@
     {
         "name": "美团抢券25-12",
         "file": "mt_coupons",
-        "version": "2",
+        "version": "3",
         "cron": "58 59 10 ? * * ",
         "scope": "com.sankuai.meituan",
         "env": [

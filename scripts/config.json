@@ -111,7 +111,7 @@
     {
         "name": "美团抢券30-15 (临时--新增三张)",
         "file": "mt3015",
-        "version": "2",
+        "version": "3",
         "cron": "58 59 10 ? * * ",
         "scope": "com.sankuai.meituan",
         "env": [

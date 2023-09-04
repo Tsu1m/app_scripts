@@ -6825,17 +6825,17 @@ async function postTask(url, cookie) {
             const response = await axios.post(url, data, { headers });
             if (response.status === 200 && response.data.hasOwnProperty('msg')) {
                 if (response.data.msg.includes("成功") || response.data.msg.includes("已")) {
-                    console.log(`30-15:-> ${response.data.msg}`);
+                    console.log(`状态:-> ${response.data.msg}`);
                 } else if (response.data.msg.includes("来晚了") || response.data.msg.includes("异常")) {
-                    console.log(`30-15:-> msg:${response.data.msg}`);
+                    console.log(`状态:-> msg:${response.data.msg}`);
                 } else {
-                    console.log(`30-15:-> msg:${response.data.msg}`);
+                    console.log(`状态:-> msg:${response.data.msg}`);
                 }
             } else {
-                console.log(`30-15:-> 抢券失败，状态码：${response.status}`);
+                console.log(`状态:-> 抢券失败，状态码：${response.status}`);
             }
         } catch (error) {
-            console.log(`30-15:-> 请求错误: ${error.message}`);
+            console.log(`状态:-> 请求错误: ${error.message}`);
         }
     };
 

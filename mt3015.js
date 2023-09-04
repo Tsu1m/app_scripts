@@ -6819,28 +6819,23 @@ async function generateSign(cookie, url, signDataArr) {
         })
     })
 }
-async function postTask(cookie) {
-    const url = ` https://promotion.waimai.meituan.com/lottery/couponcomponent/fetchcomponentcoupon?couponReferId=D74AC7E0775B4CE38A88F741CA429815&actualLng=0&actualLat=0&geoType=2&isInDpEnv=0&gdPageId=511898&pageId=514537`;
+async function postTask(url, cookie) {
     const makeRequest = async function (url, data, headers) {
         try {
             const response = await axios.post(url, data, { headers });
             if (response.status === 200 && response.data.hasOwnProperty('msg')) {
-                console.log(response.data.msg)
                 if (response.data.msg.includes("成功") || response.data.msg.includes("已")) {
                     console.log(`30-15:-> ${response.data.msg}`);
-                    process.exit();
-                }
-                if (response.data.msg.includes("来晚了") || response.data.msg.includes("异常")) {
+                } else if (response.data.msg.includes("来晚了") || response.data.msg.includes("异常")) {
                     console.log(`30-15:-> msg:${response.data.msg}`);
-                    process.exit();
+                } else {
+                    console.log(`30-15:-> msg:${response.data.msg}`);
                 }
             } else {
                 console.log(`30-15:-> 抢券失败，状态码：${response.status}`);
-                process.exit();
             }
         } catch (error) {
             console.log(`30-15:-> 请求错误: ${error.message}`);
-            process.exit();
         }
     };
 
@@ -6854,12 +6849,16 @@ async function main(cookie) {
     try {
         //检测状态和刷新cookie场次
         const loginStatus = await checkLoginStatus("D74AC7E0775B4CE38A88F741CA429815", cookie);
+        loginStatus = await checkLoginStatus("D5FB79FFF0A6495FBD3563CDE0A7096D", cookie);
+        loginStatus = await checkLoginStatus("9E5277BC958F4AD192F9EECED4A51D90", cookie);
         if (!loginStatus) {
             //退出程序
             process.exit();
         }
         //抢券任务
-        postTask(cookie)
+        await postTask('https://promotion.waimai.meituan.com/lottery/couponcomponent/fetchcomponentcoupon?couponReferId=D74AC7E0775B4CE38A88F741CA429815&actualLng=0&actualLat=0&geoType=2&isInDpEnv=0&gdPageId=511898&pageId=514537', cookie)
+        await postTask('https://promotion.waimai.meituan.com/lottery/couponcomponent/fetchcomponentcoupon/v2?couponReferId=9E5277BC958F4AD192F9EECED4A51D90&geoType=2&isInDpEnv=0&gdPageId=284378&pageId=283926&sceneId=1', cookie)
+        await postTask('https://promotion.waimai.meituan.com/lottery/couponcomponent/fetchcomponentcoupon/v2?couponReferId=D5FB79FFF0A6495FBD3563CDE0A7096D&geoType=2&isInDpEnv=0&gdPageId=284378&pageId=283926&sceneId=1', cookie)
     } catch (error) {
         console.error('MainError:', error.message);
         //退出程序
@@ -6867,9 +6866,10 @@ async function main(cookie) {
     }
 }
 
-console.log("某团 临时版本 30-15 三小时有效期")
+console.log("某团 临时版本 30-15 三小时有效期 （三张券）")
 console.log("脚本说明：本脚本仅供学习交流使用，禁止用于商业用途，否则后果自负！")
 console.log("开始抢券...")
+console.log("运行结束...")
 let appck = process.env.APP_COOKIE
 if (process.env.MT_COOKIES !== undefined && process.env.MT_COOKIES !== null && process.env.MT_COOKIES !== '') {
     appck = process.env.MT_COOKIES
@@ -6878,3 +6878,6 @@ if (process.env.MT_COOKIES !== undefined && process.env.MT_COOKIES !== null && p
     console.log("使用了当前账号")
 }
 main(appck);
+
+
+

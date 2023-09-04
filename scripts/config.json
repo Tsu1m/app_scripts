@@ -109,6 +109,19 @@
         ]
     },
     {
+        "name": "美团抢券30-15 (临时)",
+        "file": "mt3015",
+        "version": "1",
+        "cron": "58 59 10 ? * * ",
+        "scope": "com.sankuai.meituan",
+        "env": [
+            {
+                "envName": "MT_COOKIES",
+                "envHint": "留空则采用App内置Cookie，可自己填入网页Cookie"
+            }
+        ]
+    },
+    {
         "name": "渤海宣传员",
         "file": "bhxcy",
         "version": "1",

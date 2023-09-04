@@ -6870,8 +6870,6 @@ async function main(cookie) {
 console.log("某团 临时版本 30-15 三小时有效期")
 console.log("脚本说明：本脚本仅供学习交流使用，禁止用于商业用途，否则后果自负！")
 console.log("开始抢券...")
-console.log("运行结束...")
-
 let appck = process.env.APP_COOKIE
 if (process.env.MT_COOKIES !== undefined && process.env.MT_COOKIES !== null && process.env.MT_COOKIES !== '') {
     appck = process.env.MT_COOKIES

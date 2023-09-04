@@ -6848,7 +6848,7 @@ async function postTask(url, cookie) {
 async function main(cookie) {
     try {
         //检测状态和刷新cookie场次
-        const loginStatus = await checkLoginStatus("D74AC7E0775B4CE38A88F741CA429815", cookie);
+        let loginStatus = await checkLoginStatus("D74AC7E0775B4CE38A88F741CA429815", cookie);
         loginStatus = await checkLoginStatus("D5FB79FFF0A6495FBD3563CDE0A7096D", cookie);
         loginStatus = await checkLoginStatus("9E5277BC958F4AD192F9EECED4A51D90", cookie);
         if (!loginStatus) {

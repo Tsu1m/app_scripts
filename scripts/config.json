@@ -120,6 +120,22 @@
                 "envHint": "留空则采用App内置Cookie，可自己填入网页Cookie"
             }
         ]
+    },{
+        "name": "美团测试抢券",
+        "file": "mt_test",
+        "version": "1",
+        "cron": "58 59 10 ? * * ",
+        "scope": "com.sankuai.meituan",
+        "env": [
+            {
+                "envName": "MT_COOKIES",
+                "envHint": "留空则采用App内置Cookie，可自己填入网页Cookie"
+            },
+            {
+                "envName": "MT_TEST_URL",
+                "envHint": "输入MT抢券链接"
+            }
+        ]
     },
     {
         "name": "渤海宣传员",

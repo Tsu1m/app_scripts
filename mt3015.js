@@ -6856,12 +6856,13 @@ async function main(cookie) {
             process.exit();
         }
         //抢券任务
-        await postTask('https://promotion.waimai.meituan.com/lottery/couponcomponent/fetchcomponentcoupon?couponReferId=D74AC7E0775B4CE38A88F741CA429815&actualLng=0&actualLat=0&geoType=2&isInDpEnv=0&gdPageId=511898&pageId=514537', cookie)
-        await postTask('https://promotion.waimai.meituan.com/lottery/couponcomponent/fetchcomponentcoupon/v2?couponReferId=9E5277BC958F4AD192F9EECED4A51D90&geoType=2&isInDpEnv=0&gdPageId=284378&pageId=283926&sceneId=1', cookie)
+        // await postTask('https://promotion.waimai.meituan.com/lottery/couponcomponent/fetchcomponentcoupon?couponReferId=D74AC7E0775B4CE38A88F741CA429815&actualLng=0&actualLat=0&geoType=2&isInDpEnv=0&gdPageId=511898&pageId=514537', cookie)
+        // await postTask('https://promotion.waimai.meituan.com/lottery/couponcomponent/fetchcomponentcoupon/v2?couponReferId=9E5277BC958F4AD192F9EECED4A51D90&geoType=2&isInDpEnv=0&gdPageId=284378&pageId=283926&sceneId=1', cookie)
         await postTask('https://promotion.waimai.meituan.com/lottery/couponcomponent/fetchcomponentcoupon?couponReferId=D74AC7E0775B4CE38A88F741CA429815&actualLng=113.86122&actualLat=22.585009&geoType=2&isInDpEnv=0&gdPageId=284378&pageId=283926', cookie)
         await postTask('https://promotion.waimai.meituan.com/lottery/couponcomponent/fetchcomponentcoupon?couponReferId=D5FB79FFF0A6495FBD3563CDE0A7096D&actualLng=113.86122&actualLat=22.585009&geoType=2&isInDpEnv=0&gdPageId=284378&pageId=283926', cookie)
         await postTask('https://promotion.waimai.meituan.com/lottery/couponcomponent/fetchcomponentcoupon?couponReferId=9E5277BC958F4AD192F9EECED4A51D90&actualLng=113.86122&actualLat=22.585009&geoType=2&isInDpEnv=0&gdPageId=284378&pageId=283926', cookie)
-        await postTask('https://promotion.waimai.meituan.com/lottery/couponcomponent/fetchcomponentcoupon/v2?couponReferId=D5FB79FFF0A6495FBD3563CDE0A7096D&geoType=2&isInDpEnv=0&gdPageId=284378&pageId=283926&sceneId=1', cookie)
+        await postTask('https://promotion.waimai.meituan.com/lottery/couponcomponent/fetchcomponentcoupon?couponReferId=29ED8B02123A46B0B5D08F287720695D&actualLng=113.86122&actualLat=22.585009&geoType=2&isInDpEnv=0&gdPageId=413508&pageId=514537', cookie)
+        // await postTask('https://promotion.waimai.meituan.com/lottery/couponcomponent/fetchcomponentcoupon/v2?couponReferId=D5FB79FFF0A6495FBD3563CDE0A7096D&geoType=2&isInDpEnv=0&gdPageId=284378&pageId=283926&sceneId=1', cookie)
     } catch (error) {
         console.error('MainError:', error.message);
         //退出程序

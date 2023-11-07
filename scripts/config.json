@@ -87,7 +87,7 @@
     {
         "name": "美团Leaf 3.10",
         "file": "meituanV3",
-        "version": "8",
+        "version": "9",
         "cron": "0 15 10 ? * * ",
         "scope": "com.sankuai.meituan"
     },

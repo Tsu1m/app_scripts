@@ -85,11 +85,17 @@
         ]
     },
     {
-        "name": "美团Leaf 3.13",
+        "name": "美团Leaf 3.14",
         "file": "meituanV3",
-        "version": "13",
+        "version": "14",
         "cron": "0 15 10 ? * * ",
-        "scope": "com.sankuai.meituan"
+        "scope": "com.sankuai.meituan",
+        "env": [
+            {
+                "envName": "MEITUAN_UUID",
+                "envHint": "输入UUID"
+            }
+        ]
     },
     {
         "name": "美团抢券25-12",

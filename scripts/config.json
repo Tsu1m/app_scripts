@@ -85,9 +85,9 @@
         ]
     },
     {
-        "name": "美团Leaf 3.14",
+        "name": "美团Leaf 3.15",
         "file": "meituanV3",
-        "version": "14",
+        "version": "15",
         "cron": "0 15 10 ? * * ",
         "scope": "com.sankuai.meituan",
         "env": [

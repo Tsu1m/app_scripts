@@ -2,7 +2,7 @@ console.log('运行成功')
 
 console.log('下载的配置文件')
 
-console.log('"asdfasdfasdfasdf')
+console.log('sdfsadfasdfasdfased')
 
 console.log(process.env.JD_KEY_CK)
 
